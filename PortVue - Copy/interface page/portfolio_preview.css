@@ -1,0 +1,184 @@
+/* Portfolio Preview Styles - Based on top_iframe */
+
+#portvue_heading
+{
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #cccccc;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+#portfolio_preview {
+  margin: 0 auto;
+  margin-top: 2vh;
+  height: 450px;
+  width: 310px;
+  background-color: rgba(100, 100, 100, 0.5);
+  position: relative;
+  border-radius: 25px;
+}
+
+#portfolio_preview h6 {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 700px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+
+/* iframe thumbnail preview */
+.iframe-thumb-edit {
+  --vw: 1280px;
+  --vh: 720px;
+  --tw: 300px;
+  --scale: calc(var(--tw) / var(--vw));
+
+  width: var(--tw);
+  height: calc(var(--vh) * var(--scale));
+  margin-left: 5px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+}
+
+.iframe-thumb-edit iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--vw);
+  height: var(--vh);
+  transform: translateX(0) scale(var(--scale));
+  transform-origin: top left;
+  border: 0;
+  pointer-events: none;
+}
+
+.iframe-thumb-edit iframe[scrolling="no"] { 
+  overflow: hidden; 
+}
+
+#visit-btn {
+  display: inline-block;
+  padding: 0.3rem 0.733rem;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
+  color: #fff;
+  background-color: #6d0000;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 34%;
+}
+
+#visit-btn:hover {
+  background-color: #af0000;
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+#visit-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+#tags-display {
+  font-size: 1rem;
+  text-align: center;
+  color: #cccccc;
+  line-height: 2.6;
+  margin: 0 auto;
+  max-width: 700px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  padding: 5px;
+}
+
+#des-container-edit {
+  background-color: #c8c8c8;
+  padding: 10px;
+  color: white;
+  width: 94%;
+  height: 80px;
+  border-radius: 25px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-size: 0.8rem;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  white-space: normal;
+  overflow-y: auto;
+}
+
+#des-container-edit::-webkit-scrollbar {
+  width: 0px;
+  height: 10px;
+}
+
+#des-container-edit::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+#des-container-edit::-webkit-scrollbar-thumb {
+  background-color: #c8c8c8;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+#des-container-edit::-webkit-scrollbar-thumb:hover {
+  background-color: #c8c8c8;
+}
+
+#ratings-display {
+  text-align: center;
+  font-size: 1rem;
+  color: #cccccc;
+  margin-top: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+
+#delete-btn {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  color: #fff;
+  background-color: #d32f2f;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 80px;
+}
+
+#delete-btn:hover {
+  background-color: #b71c1c;
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+#delete-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}

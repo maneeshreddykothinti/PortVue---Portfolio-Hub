@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortVue Classrooms</title>
+    <link rel="stylesheet" href="clroom.css?v=1">
+</head>
+<body>
+    <div id="container">
+        <h1>📚 PortVue Classrooms</h1>
+        <div id="options">
+            <button onclick="showCreate()" id="opt1">➕ Create a Classroom</button>
+            <button onclick="showJoin()" id="opt2">🔑 Join a Classroom</button>
+            <button onclick="showAdminHub()" id="opt3">🛠️ Admin? Here's your hub</button>
+        </div>
+
+        <div class="form-section" id="createSection">
+            <h2>Create a Classroom</h2>
+            <form id="createForm">
+                <input type="text" placeholder="Enter your PortVue User Name" required>
+                <input type="text" placeholder="Enter Class Code (e.g., CODE123)" required>
+                <input type="password" placeholder="Set Password" required>
+                <button type="button" onclick="creating()">Create & Join</button>
+                <button type="button" id="back_home" onclick="home()">🔙HOME</button>
+            </form>
+        </div>
+        
+        <div class="form-section" id="joinSection">
+            <h2>Join a Classroom</h2>
+            <form id="joinForm">
+                <input type="text" placeholder="Enter Class Code" required>
+                <input type="password" placeholder="Enter Class Password" required>
+                <button type="button" onclick="joining()">Join</button>
+                <button type="button" id="back_home" onclick="home()">🔙HOME</button>
+            </form>
+        </div>
+
+        <div class="form_section" style="display: none;" id="login_hub">
+            <h2>Admin Hub Login</h2>
+            <form id="hub_login">
+                <input type="text" placeholder="Enter your PortVue User Name" required>
+                <input type="text" placeholder="Enter Class Code (e.g., CODE123)" required>
+                <input type="password" placeholder="Enter Password" required>
+                <button type="button" onclick="admin_hub()">Review your pupil's work</button>
+                <button type="button" id="back_home" onclick="home()">🔙HOME</button>
+            </form>
+        </div>
+
+
+        <div id="classroomArea" style="display: none;">
+            <h2>Submit Your Portfolio</h2>
+            <form id="portfolioForm" style="display: flex; flex-direction: column; align-items: center;">
+            <input type="text" placeholder="Roll Number" required>
+            <div style="width: 80%;">
+                <label for="portfolioFolder" style="color: #249595; font-size: 14px;">Select Portfolio Folder:</label>
+                <input type="file" id="portfolioFolder" webkitdirectory directory multiple required onchange="handleFolderChange(event)" style="display: block; margin: 10px 0; padding: 10px;">
+                <small style="font-size: 12px; color: rgb(100, 0, 0);">Main file must be named <b>index.html</b> in the root of the selected folder. Images and assets should be publicly accessible URLs if referenced externally.</small>
+                <div id="fileList" style="margin-top: 10px; font-size: 12px; max-height: 120px; overflow: auto; border: 1px dashed #ccc; padding: 8px; border-radius: 6px; display: none;"></div>
+            </div>
+                <div class="button-group">
+                    <a href="#previewIframe" onclick="previewWebsite()" style="text-decoration: none;"><button type="button" >✅ Verify</button></a>
+                </div>
+            <iframe id="previewIframe" style="display: none; width: 100%; height: 500px; margin-top: 20px; border: 1px solid #ccc;"></iframe>
+            <div class="button-group">
+                <br> <br>
+                    <button type="button" id="show_publish" onclick="published(event)" style="display: none">🚀 Publish</button>
+                </div>
+            </form>
+            <button type="button" id="back_home" onclick="home()">🔙HOME</button>
+        </div>
+
+        <div id="AdminHubArea" style="display: none;">
+            <h2>Check out the fantastic projects your students have completed!</h2>
+            <div id="delete_button_container" style="text-align: right; margin-bottom: 10px;"></div>
+            <div id="hub_container">
+                
+            </div>
+            <button type="button" id="back_home" onclick="home()">🔙HOME</button>
+        </div>
+    </div>
+    <script src="clroom.js?v=1"></script>
+</body>
+</html>
